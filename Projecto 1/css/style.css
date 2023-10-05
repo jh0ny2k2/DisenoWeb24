@@ -1,13 +1,10 @@
 *{
+    
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
-  }
-
-  .container {
-
   }
 
   nav{
@@ -16,7 +13,7 @@
    top: 0;
    border-radius: 10px; 
    width: 90%;
-   height: 100px;
+   height: 140px;
    background: #ffffff;
    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1);
    margin-left: 5%;
@@ -24,6 +21,7 @@
   }
   nav .navbar{
    display: flex;
+   flex-direction: column;
    align-items: center;
    justify-content: space-between;
    height: 100%;
@@ -37,15 +35,38 @@
   .navbar .menu li{
     list-style: none;
     margin: 0 15px;
+    margin-bottom: 10px;
   }
   .navbar .menu li a{
-    color: #000000;
+    color: #0072bd;
+    font-size: 17px;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 50px;
+  }
+
+  .navbar .menu li a:hover{
+    color: #ebc200;
+    filter:  blur(0.8px);
     font-size: 17px;
     font-weight: 500;
     text-decoration: none;
   }
+
+  .container{
+    width: 90%;
+    margin-left: 5%;
+  } 
+
+  .imagen{
+    border-radius: 10px;
+    width: 90%;
+    margin-top: 60%;
+  }
+
   section{
     display: flex;
+    flex-direction: column;
     height: 100vh;
     width: 100%;
     align-items: center;
@@ -63,4 +84,160 @@
     font-size: 18px;
     border-radius: 6px;
     box-shadow: rgba(0, 0, 0, 0.15);
+  }
+
+  .subnavegador {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
+    background-color: #0072bd;
+    border-radius: 10px;
+    width: 90%;
+    text-align: center;
+    padding: 10px;
+  }
+
+  button {
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 10px;
+    min-width: 300px;
+    color: #0072bd;
+    margin-bottom: 10%;
+  }
+
+  .anuncios{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 90%;
+    text-align: center;
+    background-color: #f1f1f1;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 100px;
+  }
+  .anuncios1{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 40px;  
+    width: 90%; 
+    color: #000000;
+    font-size:15pt;
+    align-items: center;
+    width: 1600px;
+  }
+  
+  h6 {
+    color: #0072bd  ;
+    padding: 10px;
+  }
+
+  footer {
+    background-color:#0072bd;
+    width: 90%;
+    margin-top: 100px;
+    border-radius: 10px;
+  }
+
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
+  }
+
+  .footer .linea {
+    margin-top: 20px;
+    width: 30px;
+    height: 100px;
+    text-align: center;
+
+  }
+
+  .footer .logo {
+    margin-top: 20px;
+    width: 150px;
+    margin-left: 50px;
+  }
+
+  .footer .ultimo {
+    padding: 20px;
+    font-size: 20pt;
+    text-align: center;
+  }
+
+  .footer .ultimo li{
+    list-style:none;
+  }
+
+  .footer .ultimo a {
+    color: #000000;
+  }
+
+  .footer .ultimo h6 {
+    color: #000000;
+  }
+
+/* AYUNTAMIENTO */
+
+  .ayto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+  }
+
+  .aytoFoto {
+    width: 10cm;
+  }
+
+
+
+  @media (min-width: 360px) and (max-width: 640px) {
+
+  nav{
+    position: fixed;
+    left: 0;
+    top: 0;
+    border-radius: 10px; 
+    width: 90%;
+    height: 100px;
+    background: #ffffff;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 5%;
+    margin-top: 10px;
+  }
+     nav .navbar{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      max-width: 90%;
+      background: #ffffff;
+      margin: auto;
+     }
+    nav .navbar .menu{    
+      display: flex;
+    }
+    .navbar .menu li{
+      list-style: none;
+      margin: 0 15px;
+    }
+    .navbar .menu li a{
+      color: #000000;
+      font-size: 17px;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    
   }
