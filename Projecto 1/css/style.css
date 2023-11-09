@@ -200,7 +200,6 @@
   .aytoFoto {
     width: 10cm;
   }
-
 }
 
     
@@ -397,7 +396,6 @@
 
 @media screen and (min-width: 480px) and (max-width: 1023px) {
   *{
-    
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -411,7 +409,7 @@
    top: 0;
    border-radius: 10px; 
    width: 90%;
-   height: 140px;
+   height: 160px;
    background: #ffffff;
    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1);
    margin-left: 5%;
@@ -419,7 +417,7 @@
   }
   nav .navbar{
    display: flex;
-   flex-direction: column;
+   flex-direction: row;
    align-items: center;
    justify-content: space-between;
    height: 100%;
@@ -429,6 +427,7 @@
   }
   nav .navbar .menu{    
     display: flex;
+    flex-direction: column;
   }
   .navbar .menu li{
     list-style: none;
@@ -576,13 +575,59 @@
     color: #000000;
   }
 
+  /* LA MOJONERA */
+  .informacion{
+    margin-top: 150%;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+  }
+
+  .imagenayto{
+    margin-top: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+    width: 90%;
+    margin-left: 5%;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    height: min-content;
+    align-items: center;
+  }
+
+  .imagenayto img{
+    border-radius: 20px;
+    padding: 10px;
+  }
+
+  .imagenalcalde{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+    width: 90%;
+    height: min-content;
+    margin-left: 5%;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    align-items: center;
+  }
+
+  .imagenalcalde img{
+    border-radius: 20px;
+    padding: 10px;
+  }
+
 }   
 
 
     @media screen and (max-width: 480px) {
 
       *{
-    
         margin: 0;
         padding: 0;
         box-sizing: border-box;
@@ -605,7 +650,7 @@
 
       nav .navbar{
        display: flex;
-       flex-direction: row;
+       flex-direction: column;
        align-items: center;
        justify-content: space-between;
        height: 100%;
@@ -758,18 +803,8 @@
         color: #000000;
       }
     
-    /* AYUNTAMIENTO */
+    /* LA MOJONERA */
     
-      .ayto {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-column-gap: 20px;
-        grid-row-gap: 30px;
-      }
-    
-      .aytoFoto {
-        width: 10cm;
-      }
-    
+      
+
     }
