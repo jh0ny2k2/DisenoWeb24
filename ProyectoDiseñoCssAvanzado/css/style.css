@@ -125,6 +125,21 @@ hr {
 }
 
 
+/* CLASIFICACIONES */
+
+table {
+  border-top: 1px solid #ff0000;
+  border-right: 1px solid #ff0000;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+  width: 80%;
+  max-width: 80%;
+  margin-left: 10%;
+}
+table td {
+  padding: 10px;
+} 
 
 
 
