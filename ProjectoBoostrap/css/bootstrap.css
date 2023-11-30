@@ -8,7 +8,7 @@
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
-  --bs-purple: #6f42c1;
+  --bs-purple: #d3d3d3;
   --bs-pink: #d63384;
   --bs-red: #ff0019;
   --bs-orange: #fd7e14;
@@ -3679,9 +3679,9 @@ textarea.form-control-lg {
   background-color: #ffffff;
 }
 .dropdown-item.active, .dropdown-item:active {
-  color: #fff;
+  color: #ff0019;
   text-decoration: none;
-  background-color: #0d6efd;
+  background-color: #ffffff;
 }
 .dropdown-item.disabled, .dropdown-item:disabled {
   color: #adb5bd;
@@ -4254,9 +4254,8 @@ textarea.form-control-lg {
   min-width: 0;
   word-wrap: break-word;
   background-color: #fff;
-  background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
+  background-clip: border-box; 
+  border-radius: 10px;
 }
 .card > hr {
   margin-right: 0;
@@ -6573,6 +6572,12 @@ textarea.form-control-lg {
   width: 75% !important;
 }
 
+.w-90 {
+  width: 90% !important;
+}
+.w-11 {
+  width: 70px !important;
+}
 .w-100 {
   width: 100% !important;
 }
@@ -7395,7 +7400,7 @@ textarea.form-control-lg {
 }
 
 .bg-secondary {
-  background-color: #6c757d !important;
+  background-color: #d3d3d3 !important;
 }
 
 .bg-success {
