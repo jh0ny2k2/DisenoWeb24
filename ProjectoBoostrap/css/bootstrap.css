@@ -6575,9 +6575,15 @@ textarea.form-control-lg {
 .w-90 {
   width: 90% !important;
 }
+
 .w-11 {
   width: 70px !important;
 }
+
+.w-12 {
+  width: 150px !important;
+}
+
 .w-100 {
   width: 100% !important;
 }
@@ -6948,6 +6954,10 @@ textarea.form-control-lg {
   margin-top: 5rem !important;
 }
 
+.mt-6 {
+  margin-top: 7rem !important;
+}
+
 .mt-auto {
   margin-top: auto !important;
 }
@@ -7030,6 +7040,10 @@ textarea.form-control-lg {
 
 .ms-5 {
   margin-left: 5rem !important;
+}
+
+.ms-50 {
+  margin-left: 39% !important;
 }
 
 .ms-auto {
