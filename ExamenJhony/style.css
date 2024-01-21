@@ -1,0 +1,122 @@
+/* PARTE 1 */
+
+.posicionamientoFijo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    padding: 10px;
+}
+
+/* PARTE 2 */
+
+.parte2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.flex {
+    flex: 0 1 calc(25% - 20px); /* Establece el ancho de cada div */
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    text-align: center;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.flex:nth-child(1) {
+    color: black;
+}
+
+.flex:nth-child(1):hover {
+    color: yellow;
+    transform: rotatey(50deg);
+}
+
+.flex:nth-child(2) {
+    color: #3498db;
+}
+
+.flex:nth-child(2):hover {
+    color: black;
+    transform: scale(1.10);
+}
+.flex:nth-child(3) {
+    color: #27ae60;
+}
+
+.flex:nth-child(3):hover {
+    color: red;
+    transform: rotate(90deg);
+}
+
+.flex:nth-child(4) {
+    color: #e74c3c;
+}
+
+.flex:nth-child(4):hover {
+    color: brown;
+    translate: 50px;
+}
+
+/* PARTE 3 */
+.flex1 {
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+@media (max-width: 576px) {
+    .flex1 {
+        width: calc(100% - 20px);
+        float: none;
+        display: block;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .flex1 {
+        width: calc(50% - 20px);
+        float: left;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 1025px) {
+    .flex1 {
+        width: calc(25% - 20px);
+        float: left;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* PARTE 4 */
+
+.parte4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+
+    overflow: auto;
+
+    align-items: center;
+    justify-content: center;
+}
+.grid:first-child, .grid:last-child {
+    grid-column: span 4;
+}
+.grid {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
