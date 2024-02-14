@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/styles.css">
+    <title>Pilotos // MOTO GP</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+
+    <script src="../src/script.js"></script>
+</head>
+<body class="font-sans bg-gray-200">
+
+    <!-- 1. Menú de Navegación -->
+   
+
+    <nav class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700 ml-4 mr-4 mt-4 mb-4 rounded-lg">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="../images/Moto_Gp_logo.png" class="h-12" alt="Logo MotoGP" />
+            </a>
+            <button data-collapse-toggle="navbar-multi-level" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-multi-level" aria-expanded="false">
+                <span class="sr-only">Abrir Menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level">
+                <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                <li>
+                    <a href="index.html" class="block py-2 px-3 text-white bg-red-700 rounded md:bg-transparent md:text-red-700 md:p-0 md:dark:text-red-500 dark:bg-red-600 md:dark:bg-transparent" aria-current="page">Inicio</a>
+                </li>
+                
+                <li>
+                    <a href="calendario.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Calendario</a>
+                </li>
+                <li>
+                    <a href="resultados.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Resultados</a>
+                </li>
+                <li>
+                    <a href="pilotos.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pilotos y Equipos</a>
+                </li>
+                <li>
+                    <a href="contacto.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contacto</a>
+                </li>
+                
+                </ul>
+            </div>
+        </div>
+    </nav>
+  
+
+    <!-- 2. Header -->
+    
+
+    <div id="default-carousel" class="relative w-full" data-carousel="slide">
+        <!-- Carousel wrapper -->
+        <div class="relative h-96 ml-4 mr-4 overflow-hidden rounded-lg md:h-full">
+            <!-- Item 1 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="../images/1.jpg" class="absolute block w-full  -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
+            <!-- Item 2 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="../images/2.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
+            <!-- Item 3 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="../images/3.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
+            <!-- Item 4 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="../images/4.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
+            <!-- Item 5 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="../images/5.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
+        </div>
+        <!-- Slider indicators -->
+        <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+        </div>
+        <!-- Slider controls -->
+        <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                </svg>
+                <span class="sr-only">Anterior</span>
+            </span>
+        </button>
+        <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                </svg>
+                <span class="sr-only">Siguiente</span>
+            </span>
+        </button>
+    </div>
+
+
+    <!-- 3. Título -->
+
+    <div class="relative md:h-full bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-70 ml-4 mr-4 mt-4 mb-4 rounded-lg">
+
+        <div class="flex mt-5 mb-5 ml-6 mr-10">
+            <img src="../images/Captura_de_pantalla_2024-01-20_142656-removebg-preview.png" class="h-12 mt-3" alt=""/>
+            <h1 class="mt-4 font-mono font-bold text-3xl tracking-wide text-wrap">PILOTOS Y EQUIPOS</h1>
+        </div>
+
+        <div class="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <ul class="flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-gray-200 rounded-t-lg bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:bg-gray-800" id="defaultTab" data-tabs-toggle="#defaultTabContent" role="tablist">
+                <li class="me-2">
+                    <button id="about-tab" data-tabs-target="#about" type="button" role="tab" aria-controls="about" aria-selected="true" class="inline-block p-4 text-blue-600 rounded-ss-lg hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-blue-500">Pilotos</button>
+                </li>
+                <li class="me-2">
+                    <button id="services-tab" data-tabs-target="#services" type="button" role="tab" aria-controls="services" aria-selected="false" class="inline-block p-4 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300">Equipos</button>
+                </li>
+            </ul>
+            <div id="defaultTabContent">
+                <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="about" role="tabpanel" aria-labelledby="about-tab">
+                    
+                    <div class="grid grid-cols-4">
+                        <div class="max-w-sm bg-white rounded-lg text-center shadow dark:bg-gray-800 dark:border-gray-700">
+                            <a href="#">
+                                <img class="rounded-t-lg mt-3" src="../images/pilotos/10_Luca_Marini_DS_5278-removebg-preview.png" alt="" />
+                            </a>
+                            <div class="p-5">
+                                <h5 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Luca Marini</h5>
+                                <div class="flex">
+                                    <img class="w-6 rounded-lg" src="https://static-files.motogp.pulselive.com/assets/flags/es.svg" alt="ES flag" loading="lazy">
+                                    <p class="mb-3 mt-2 ml-2 font-normal text-gray-700 dark:text-gray-400">Italia | Repsol Honda Team</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="max-w-sm bg-white rounded-lg text-center shadow dark:bg-gray-800 dark:border-gray-700">
+                            <a href="#">
+                                <img class="rounded-t-lg mt-3" src="../images/pilotos/05_Johann_Zarco_DS_5294-removebg-preview.png" alt="" />
+                            </a>
+                            <div class="p-5">
+                                <h5 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Johann Zarco</h5>
+                                <div class="flex">
+                                    <img class="w-6 rounded-lg" src="https://static-files.motogp.pulselive.com/assets/flags/es.svg" alt="ES flag" loading="lazy">
+                                    <p class="mb-3 mt-2 ml-2 font-normal text-gray-700 dark:text-gray-400">Francia | LCR Honda</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="max-w-sm bg-white rounded-lg text-center shadow dark:bg-gray-800 dark:border-gray-700">
+                            <a href="#">
+                                <img class="rounded-t-lg mt-3" src="../images/pilotos/21_Franco_Morbidelli_DS_5306-removebg-preview.png" alt="" />
+                            </a>
+                            <div class="p-5">
+                                <h5 class=" text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Franco Morbidelli</h5>
+                                <div class="flex">
+                                    <img class="w-6 rounded-lg" src="https://static-files.motogp.pulselive.com/assets/flags/es.svg" alt="ES flag" loading="lazy">
+                                    <p class="mb-3 mt-2 ml-2 font-normal text-gray-700 dark:text-gray-400">Italia | Prima Pramac Racing</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="max-w-sm bg-white rounded-lg text-center shadow dark:bg-gray-800 dark:border-gray-700">
+                            <a href="#">
+                                <img class="rounded-t-lg mt-3" src="../images/pilotos/31_Pedro_Acosta_DS_5257-removebg-preview.png" alt="" />
+                            </a>
+                            <div class="p-5">
+                                <h5 class=" text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Pedro Acosta</h5>
+                                <div class="flex">
+                                    <img class="w-6 rounded-lg" src="https://static-files.motogp.pulselive.com/assets/flags/es.svg" alt="ES flag" loading="lazy">
+                                    <p class="mb-3 mt-2 ml-2 font-normal text-gray-700 dark:text-gray-400">España | Gas Gas Factory Racing Tech 3</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="max-w-sm bg-white rounded-lg text-center shadow dark:bg-gray-800 dark:border-gray-700">
+                            <a href="#">
+                                <img class="rounded-t-lg mt-3" src="../images/pilotos/42_Alex_Rins_DS_6238-removebg-preview.png" alt="" />
+                            </a>
+                            <div class="p-5">
+                                <h5 class=" text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Alex Rins</h5>
+                                <div class="flex">
+                                    <img class="w-6 rounded-lg" src="https://static-files.motogp.pulselive.com/assets/flags/es.svg" alt="ES flag" loading="lazy">
+                                    <p class="mb-3 mt-2 ml-2 font-normal text-gray-700 dark:text-gray-400">España | Monster Energy Yamaha</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="max-w-sm bg-white rounded-lg text-center shadow dark:bg-gray-800 dark:border-gray-700">
+                            <a href="#">
+                                <img class="rounded-t-lg mt-3" src="../images/pilotos/49_Fabio_Di_Giannantonio_DS_5323-removebg-preview.png" alt="" />
+                            </a>
+                            <div class="p-5">
+                                <h5 class=" text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Fabio di Giannantonio</h5>
+                                <div class="flex">
+                                    <img class="w-6 rounded-lg" src="https://static-files.motogp.pulselive.com/assets/flags/es.svg" alt="ES flag" loading="lazy">
+                                    <p class="mb-3 mt-2 ml-2 font-normal text-gray-700 dark:text-gray-400">Italia | Pertamina Enduro VR46</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="max-w-sm bg-white rounded-lg text-center shadow dark:bg-gray-800 dark:border-gray-700">
+                            <a href="#">
+                                <img class="rounded-t-lg mt-3" src="../images/pilotos/alex.png" alt="" />
+                            </a>
+                            <div class="p-5">
+                                <h5 class=" text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Alex Marquez</h5>
+                                <div class="flex">
+                                    <img class="w-6 rounded-lg" src="https://static-files.motogp.pulselive.com/assets/flags/es.svg" alt="ES flag" loading="lazy">
+                                    <p class="mb-3 mt-2 ml-2 font-normal text-gray-700 dark:text-gray-400">España | Gresini Racing</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="max-w-sm bg-white rounded-lg text-center shadow dark:bg-gray-800 dark:border-gray-700">
+                            <a href="#">
+                                <img class="rounded-t-lg mt-3" src="../images/pilotos/augusto.png" alt="" />
+                            </a>
+                            <div class="p-5">
+                                <h5 class=" text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Augusto Fernandez</h5>
+                                <div class="flex">
+                                    <img class="w-6 rounded-lg" src="https://static-files.motogp.pulselive.com/assets/flags/es.svg" alt="ES flag" loading="lazy">
+                                    <p class="mb-3 mt-2 ml-2 font-normal text-gray-700 dark:text-gray-400">España | Gas Gas Factory Racing Tech 3</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="max-w-sm bg-white rounded-lg text-center shadow dark:bg-gray-800 dark:border-gray-700">
+                            <a href="#">
+                                <img class="rounded-t-lg mt-3" src="../images/pilotos/bagnaia.png" alt="" />
+                            </a>
+                            <div class="p-5">
+                                <h5 class=" text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Pecco Bagnaia</h5>
+                                <div class="flex">
+                                    <img class="w-6 rounded-lg" src="https://static-files.motogp.pulselive.com/assets/flags/es.svg" alt="ES flag" loading="lazy">
+                                    <p class="mb-3 mt-2 ml-2 font-normal text-gray-700 dark:text-gray-400">Italia | Ducati Lenovo Team</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="max-w-sm bg-white rounded-lg text-center shadow dark:bg-gray-800 dark:border-gray-700">
+                            <a href="#">
+                                <img class="rounded-t-lg mt-3" src="../images/pilotos/bastianini.png" alt="" />
+                            </a>
+                            <div class="p-5">
+                                <h5 class=" text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Enea Bastianini</h5>
+                                <div class="flex">
+                                    <img class="w-6 rounded-lg" src="https://static-files.motogp.pulselive.com/assets/flags/es.svg" alt="ES flag" loading="lazy">
+                                    <p class="mb-3 mt-2 ml-2 font-normal text-gray-700 dark:text-gray-400">Italia | Ducati Lenovo Team</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="max-w-sm bg-white rounded-lg text-center shadow dark:bg-gray-800 dark:border-gray-700">
+                            <a href="#">
+                                <img class="rounded-t-lg mt-3" src="../images/pilotos/bezzechi.png" alt="" />
+                            </a>
+                            <div class="p-5">
+                                <h5 class=" text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Marco Bezzechi</h5>
+                                <div class="flex">
+                                    <img class="w-6 rounded-lg" src="https://static-files.motogp.pulselive.com/assets/flags/es.svg" alt="ES flag" loading="lazy">
+                                    <p class="mb-3 mt-2 ml-2 font-normal text-gray-700 dark:text-gray-400">Italia | Pertamina Enduro VR46</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="max-w-sm bg-white rounded-lg text-center shadow dark:bg-gray-800 dark:border-gray-700">
+                            <a href="#">
+                                <img class="rounded-t-lg mt-3" src="../images/pilotos/binder.png" alt="" />
+                            </a>
+                            <div class="p-5">
+                                <h5 class=" text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Brad Binder</h5>
+                                <div class="flex">
+                                    <img class="w-6 rounded-lg" src="https://static-files.motogp.pulselive.com/assets/flags/es.svg" alt="ES flag" loading="lazy">
+                                    <p class="mb-3 mt-2 ml-2 font-normal text-gray-700 dark:text-gray-400">South Africa | KTM Factory Racing</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="max-w-sm bg-white rounded-lg text-center shadow dark:bg-gray-800 dark:border-gray-700">
+                            <a href="#">
+                                <img class="rounded-t-lg mt-3" src="../images/pilotos/espargaro.png" alt="" />
+                            </a>
+                            <div class="p-5">
+                                <h5 class=" text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Pol Espargaro</h5>
+                                <div class="flex">
+                                    <img class="w-6 rounded-lg" src="https://static-files.motogp.pulselive.com/assets/flags/es.svg" alt="ES flag" loading="lazy">
+                                    <p class="mb-3 mt-2 ml-2 font-normal text-gray-700 dark:text-gray-400">España | Aprilia Racing</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="max-w-sm bg-white rounded-lg text-center shadow dark:bg-gray-800 dark:border-gray-700">
+                            <a href="#">
+                                <img class="rounded-t-lg mt-3" src="../images/pilotos/Fabioquartararo-1-removebg-preview.png" alt="" />
+                            </a>
+                            <div class="p-5">
+                                <h5 class=" text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Fabio Quartararo</h5>
+                                <div class="flex">
+                                    <img class="w-6 rounded-lg" src="https://static-files.motogp.pulselive.com/assets/flags/es.svg" alt="ES flag" loading="lazy">
+                                    <p class="mb-3 mt-2 ml-2 font-normal text-gray-700 dark:text-gray-400">España | Moster Energy Yamaha Team</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="max-w-sm bg-white rounded-lg text-center shadow dark:bg-gray-800 dark:border-gray-700">
+                            <a href="#">
+                                <img class="rounded-t-lg mt-3" src="../images/pilotos/jorge.png" alt="" />
+                            </a>
+                            <div class="p-5">
+                                <h5 class=" text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Jorge Martin</h5>
+                                <div class="flex">
+                                    <img class="w-6 rounded-lg" src="https://static-files.motogp.pulselive.com/assets/flags/es.svg" alt="ES flag" loading="lazy">
+                                    <p class="mb-3 mt-2 ml-2 font-normal text-gray-700 dark:text-gray-400">España | Prima Pramac Racing Team</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="max-w-sm bg-white rounded-lg text-center shadow dark:bg-gray-800 dark:border-gray-700">
+                            <a href="#">
+                                <img class="rounded-t-lg mt-3" src="../images/pilotos/marc.png" alt="" />
+                            </a>
+                            <div class="p-5">
+                                <h5 class=" text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Marc Marquez</h5>
+                                <div class="flex">
+                                    <img class="w-6 rounded-lg" src="https://static-files.motogp.pulselive.com/assets/flags/es.svg" alt="ES flag" loading="lazy">
+                                    <p class="mb-3 mt-2 ml-2 font-normal text-gray-700 dark:text-gray-400">España | Gresini Racing</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="max-w-sm bg-white rounded-lg text-center shadow dark:bg-gray-800 dark:border-gray-700">
+                            <a href="#">
+                                <img class="rounded-t-lg mt-3" src="../images/pilotos/miller.png" alt="" />
+                            </a>
+                            <div class="p-5">
+                                <h5 class=" text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Jack Miller</h5>
+                                <div class="flex">
+                                    <img class="w-6 rounded-lg" src="https://static-files.motogp.pulselive.com/assets/flags/es.svg" alt="ES flag" loading="lazy">
+                                    <p class="mb-3 mt-2 ml-2 font-normal text-gray-700 dark:text-gray-400">Australia | KTM Factory Team</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="max-w-sm bg-white rounded-lg text-center shadow dark:bg-gray-800 dark:border-gray-700">
+                            <a href="#">
+                                <img class="rounded-t-lg mt-3" src="../images/pilotos/mir.png" alt="" />
+                            </a>
+                            <div class="p-5">
+                                <h5 class=" text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Joan Mir</h5>
+                                <div class="flex">
+                                    <img class="w-6 rounded-lg" src="https://static-files.motogp.pulselive.com/assets/flags/es.svg" alt="ES flag" loading="lazy">
+                                    <p class="mb-3 mt-2 ml-2 font-normal text-gray-700 dark:text-gray-400">España | Repsol Honda</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="max-w-sm bg-white rounded-lg text-center shadow dark:bg-gray-800 dark:border-gray-700">
+                            <a href="#">
+                                <img class="rounded-t-lg mt-3" src="../images/pilotos/nakagami.png" alt="" />
+                            </a>
+                            <div class="p-5">
+                                <h5 class=" text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Takaaki Nakagami</h5>
+                                <div class="flex">
+                                    <img class="w-6 rounded-lg" src="https://static-files.motogp.pulselive.com/assets/flags/es.svg" alt="ES flag" loading="lazy">
+                                    <p class="mb-3 mt-2 ml-2 font-normal text-gray-700 dark:text-gray-400">España | LCR Honda</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="max-w-sm bg-white rounded-lg text-center shadow dark:bg-gray-800 dark:border-gray-700">
+                            <a href="#">
+                                <img class="rounded-t-lg mt-3" src="../images/pilotos/oliveira.png" alt="" />
+                            </a>
+                            <div class="p-5">
+                                <h5 class=" text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Miguel Oliveira</h5>
+                                <div class="flex">
+                                    <img class="w-6 rounded-lg" src="https://static-files.motogp.pulselive.com/assets/flags/es.svg" alt="ES flag" loading="lazy">
+                                    <p class="mb-3 mt-2 ml-2 font-normal text-gray-700 dark:text-gray-400">España | TrackHouse Racing</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="max-w-sm bg-white rounded-lg text-center shadow dark:bg-gray-800 dark:border-gray-700">
+                            <a href="#">
+                                <img class="rounded-t-lg mt-3" src="../images/pilotos/viñales.png" alt="" />
+                            </a>
+                            <div class="p-5">
+                                <h5 class=" text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Maverick Viñales</h5>
+                                <div class="flex">
+                                    <img class="w-6 rounded-lg" src="https://static-files.motogp.pulselive.com/assets/flags/es.svg" alt="ES flag" loading="lazy">
+                                    <p class="mb-3 mt-2 ml-2 font-normal text-gray-700 dark:text-gray-400">España | Aprilia Racing</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="max-w-sm bg-white rounded-lg text-center shadow dark:bg-gray-800 dark:border-gray-700">
+                            <a href="#">
+                                <img class="rounded-t-lg mt-3" src="../images/pilotos/31_Pedro_Acosta_DS_5257-removebg-preview.png" alt="" />
+                            </a>
+                            <div class="p-5">
+                                <h5 class=" text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Pedro Acosta</h5>
+                                <div class="flex">
+                                    <img class="w-6 rounded-lg" src="https://static-files.motogp.pulselive.com/assets/flags/es.svg" alt="ES flag" loading="lazy">
+                                    <p class="mb-3 mt-2 ml-2 font-normal text-gray-700 dark:text-gray-400">España | TrackHouse Racing</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+                <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="services" role="tabpanel" aria-labelledby="services-tab">
+                    <div class="grid grid-cols-4 ">
+                        <div class="max-w-sm bg-white rounded-lg text-center shadow dark:bg-gray-800 dark:border-gray-700">
+                            <a href="#">
+                                <img class="rounded-t-lg mt-50" src="../images/Motos/APRILIA.png" alt="" />
+                            </a>
+                            <div class="p-5">
+                                <h5 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Aprilia Racing</h5>
+                            </div>
+                        </div>
+                        <div class="max-w-sm bg-white rounded-lg text-center shadow dark:bg-gray-800 dark:border-gray-700">
+                            <a href="#">
+                                <img class="rounded-t-lg mt-3" src="../images/Motos/DUCATI.png" alt="" />
+                            </a>
+                            <div class="p-5">
+                                <h5 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Ducati Lenovo Team</h5>
+                            </div>
+                        </div>
+                        <div class="max-w-sm bg-white rounded-lg text-center shadow dark:bg-gray-800 dark:border-gray-700">
+                            <a href="#">
+                                <img class="rounded-t-lg mt-3" src="../images/Motos/GASGAS.png" alt="" />
+                            </a>
+                            <div class="p-5">
+                                <h5 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">GASGAS Factory Racing Tech 3</h5>
+                            </div>
+                        </div>
+                        <div class="max-w-sm bg-white rounded-lg text-center shadow dark:bg-gray-800 dark:border-gray-700">
+                            <a href="#">
+                                <img class="rounded-t-lg mt-3" src="../images/Motos/GRESINI.png" alt="" />
+                            </a>
+                            <div class="p-5">
+                                <h5 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Gresini Racing MotoGP</h5>
+                            </div>
+                        </div>
+                        <div class="max-w-sm bg-white rounded-lg text-center shadow dark:bg-gray-800 dark:border-gray-700">
+                            <a href="#">
+                                <img class="rounded-t-lg mt-3" src="../images/Motos/LCR.png" alt="" />
+                            </a>
+                            <div class="p-5">
+                                <h5 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">LCR Honda</h5>
+                            </div>
+                        </div>
+                        <div class="max-w-sm bg-white rounded-lg text-center shadow dark:bg-gray-800 dark:border-gray-700">
+                            <a href="#">
+                                <img class="rounded-t-lg mt-3" src="../images/Motos/YAMAHA.png" alt="" />
+                            </a>
+                            <div class="p-5">
+                                <h5 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Monster Energy Yamaha MotoGP</h5>
+                            </div>
+                        </div>
+                        <div class="max-w-sm bg-white rounded-lg text-center shadow dark:bg-gray-800 dark:border-gray-700">
+                            <a href="#">
+                                <img class="rounded-t-lg mt-3" src="../images/Motos/CR46.png" alt="" />
+                            </a>
+                            <div class="p-5">
+                                <h5 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Pertamina Enduro VR46 MotoGP™ Team</h5>
+                            </div>
+                        </div>
+                        <div class="max-w-sm bg-white rounded-lg text-center shadow dark:bg-gray-800 dark:border-gray-700">
+                            <a href="#">
+                                <img class="rounded-t-lg mt-3" src="../images/Motos/PRAMAC.png" alt="" />
+                            </a>
+                            <div class="p-5">
+                                <h5 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Prima Pramac Racing</h5>
+                            </div>
+                        </div>
+                        <div class="max-w-sm bg-white rounded-lg text-center shadow dark:bg-gray-800 dark:border-gray-700">
+                            <a href="#">
+                                <img class="rounded-t-lg mt-3" src="../images/Motos/KTM.png" alt="" />
+                            </a>
+                            <div class="p-5">
+                                <h5 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Red Bull KTM Factory Racing</h5>
+                            </div>
+                        </div>
+                        <div class="max-w-sm bg-white rounded-lg text-center shadow dark:bg-gray-800 dark:border-gray-700">
+                            <a href="#">
+                                <img class="rounded-t-lg mt-3" src="../images/Motos/REPSOL.png" alt="" />
+                            </a>
+                            <div class="p-5">
+                                <h5 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Repsol Honda Team</h5>
+                            </div>
+                        </div>
+                        <div class="max-w-sm bg-white rounded-lg text-center shadow dark:bg-gray-800 dark:border-gray-700">
+                            <a href="#">
+                                <img class="rounded-t-lg mt-3" src="../images/Motos/TRACKHOUSE.png" alt="" />
+                            </a>
+                            <div class="p-5">
+                                <h5 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Trackhouse Racing</h5>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    
+    
+    <!-- 5. Sección e Información -->
+    
+    
+
+    <!-- FOOTER -->
+    <footer class="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
+        <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Jhony™</a>. All Rights Reserved.
+        </span>
+        <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+            <li>
+                <a href="#" class="hover:underline me-4 md:me-6">Inicio</a>
+            </li>
+            <li>
+                <a href="#" class="hover:underline me-4 md:me-6">Política de privacidad</a>
+            </li>
+            <li>
+                <a href="#" class="hover:underline me-4 md:me-6">Licencia</a>
+            </li>
+            <li>
+                <a href="#" class="hover:underline">Contacto</a>
+            </li>
+        </ul>
+        </div>
+    </footer>
+
+
+</body>
+</html>

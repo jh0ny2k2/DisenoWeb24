@@ -1,0 +1,48 @@
+
+@media (min-width: 768px) {
+    .lg:text-2xl {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* Espaciado */
+  .m-4 {
+    margin: 1rem;
+  }
+  
+  /* Colores */
+  .bg-primary {
+    background-color: #3490dc;
+  }
+  
+  /* Tipografías */
+  .font-serif {
+    font-family: serif;
+  }
+  
+  /* Opacidad */
+  .opacity-75 {
+    opacity: 0.75;
+  }
+  
+  /* Posicionamiento y Flexbox */
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Transformaciones */
+  .rotate-45 {
+    transform: rotate(45deg);
+  }
+  
+  /* Animaciones */
+  .animate-fadeIn {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }

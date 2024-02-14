@@ -6,6 +6,9 @@
     <title>Circuitos // Formula 1</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="images/f1.avif">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="index.js"></script>
 </head>
 <body>
     <header>
@@ -33,8 +36,8 @@
       <img class="foto" src="images/f1tracks.jpg" alt="">
       <div class="container">
         <h1>CIRCUITOS</h1>
-        <h2>1 .SAKHIR</h2>
-        <section class="rowCircuito">
+        <h2 id="circuito1">1 .SAKHIR</h2>
+        <section id="datoCircuito" class="rowCircuito">
             <img src="images/Circuitos/bahrein.jpg" width="500" alt="">
             <p>CIRCUITO: Sakhir <br>
                 LONGITUD: 6299 metros <br>
@@ -44,8 +47,8 @@
                 POLE 2022: Charles Leclerc</p>
         </section>
         <br>
-        <h2>2 .JEDDAH INTERNATIONAL STREET CIRCUIT</h2>
-        <section class="rowCircuito">
+        <h2 id="circuito2">2 .JEDDAH INTERNATIONAL STREET CIRCUIT</h2>
+        <section id="datoCircuito1" class="rowCircuito">
             <img src="images/Circuitos/arabia-saudi.jpg" width="500" alt="">
             <p>CIRCUITO: Jeddah International Street Circuit <br>
                 LONGITUD: 5154 metros <br>
@@ -55,8 +58,8 @@
                 POLE 2022: Sergio Pérez</p>
         </section>
         <br>
-        <h2>3. ALBERT PARK</h2>
-        <section class="rowCircuito">
+        <h2 id="circuito3">3. ALBERT PARK</h2>
+        <section id="datoCircuito2" class="rowCircuito">
             <img src="images/Circuitos/australia.jpg" width="500" alt="">
             <p>CIRCUITO: Albert Park <br>
                 LONGITUD: 5303 metros <br>
@@ -66,8 +69,8 @@
                 POLE 2022: Charles Leclerc</p>
         </section>
         <br>
-        <h2>4. BAKU CITY CIRCUIT</h2>
-        <section class="rowCircuito">
+        <h2 id="circuito4">4. BAKU CITY CIRCUIT</h2>
+        <section id="datoCircuito3" class="rowCircuito">
             <img src="images/Circuitos/azerbaiyan.jpg" width="500" alt="">
             <p>CIRCUITO: Baku City Circuit <br>
                 LONGITUD: 0 metros <br>
@@ -77,8 +80,8 @@
                 POLE 2022: Charles Leclerc</p>
         </section>
         <br>
-        <h2>5. HARD ROCK STADIUM CIRCUIT</h2>
-        <section class="rowCircuito">
+        <h2 id="circuito5">5. HARD ROCK STADIUM CIRCUIT</h2>
+        <section id="datoCircuito4" class="rowCircuito">
             <img src="images/Circuitos/miami.jpg" width="500" alt="">
             <p>CIRCUITO: Hard Rock Stadium Circuit <br>
                 LONGITUD: 0 metros <br>
@@ -88,8 +91,8 @@
                 POLE 2022: Charles Leclerc</p>
         </section>
         <br>
-        <h2>6. IMOLA</h2>
-        <section class="rowCircuito">
+        <h2 id="circuito6">6. IMOLA</h2>
+        <section id="datoCircuito5" class="rowCircuito">
             <img src="images/Circuitos/emilia-romagna.jpg" width="500" alt="">
             <p>CIRCUITO: Imola <br>
                 LONGITUD: 0 metros <br>
@@ -99,8 +102,8 @@
                 POLE 2022: Max Verstappen</p>
         </section>
         <br>
-        <h2>7. MONTECARLO</h2>
-        <section class="rowCircuito">
+        <h2 id="circuito7">7. MONTECARLO</h2>
+        <section id="datoCircuito6" class="rowCircuito">
             <img src="images/Circuitos/monaco.jpg" width="500" alt="">
             <p>CIRCUITO: Montecarlo <br>
                 LONGITUD: 3340 metros <br>
@@ -110,8 +113,8 @@
                 POLE 2022: Charles Leclerc</p>
         </section>
         <br>
-        <h2>8. BARCELONA CATALUNYA</h2>
-        <section class="rowCircuito">
+        <h2 id="circuito8">8. BARCELONA CATALUNYA</h2>
+        <section id="datoCircuito7" class="rowCircuito">
             <img src="images/Circuitos/espana.jpg" width="500" alt="">
             <p>CIRCUITO: Catalunya <br>
                 LONGITUD: 4627 metros <br>
@@ -121,8 +124,8 @@
                 POLE 2022: Charles Leclerc</p>
         </section>
         <br>
-        <h2>9. GILLES VILLENEUVE</h2>
-        <section class="rowCircuito">
+        <h2 id="circuito9">9. GILLES VILLENEUVE</h2>
+        <section id="datoCircuito8" class="rowCircuito">
             <img src="images/Circuitos/canada.jpg" width="500" alt="">
             <p>CIRCUITO: Gilles Villeneuve <br>
                 LONGITUD: 4361 metros <br>
@@ -132,8 +135,8 @@
                 POLE 2022: Max Verstappen</p>
         </section>
         <br>
-        <h2>10. RED BULL RING</h2>
-        <section class="rowCircuito">
+        <h2 id="circuito10">10. RED BULL RING</h2>
+        <section id="datoCircuito9" class="rowCircuito">
             <img src="images/Circuitos/austria.jpg" width="500" alt="">
             <p>CIRCUITO: Red Bull Ring <br>
                 LONGITUD: 4326 metros <br> 
@@ -143,8 +146,8 @@
                 POLE 2022: Max Verstappen</p>
         </section>
         <br>
-        <h2>11. HUNGARORING</h2>
-        <section class="rowCircuito">
+        <h2 id="circuito11">11. HUNGARORING</h2>
+        <section id="datoCircuito10" class="rowCircuito">
             <img src="images/Circuitos/hungria.jpg" width="500" alt="">
             <p>CIRCUITO: Silverstone <br>
                 LONGITUD: 5141 metros <br>
@@ -153,8 +156,9 @@
                 GANADOR 2022: Carlos Sainz <br>
                 POLE 2022: Carlos Sainz</p>
         </section>
-        <h2>12. SPA-FRANCORCHAMPS</h2>
-        <section class="rowCircuito">
+        <br>
+        <h2 id="circuito12">12. SPA-FRANCORCHAMPS</h2>
+        <section id="datoCircuito11" class="rowCircuito">
             <img src="images/Circuitos/belgica.jpg" width="500" alt="">
             <p>CIRCUITO: Sakhir <br>
                 LONGITUD: 6299 metros <br>
@@ -164,8 +168,8 @@
                 POLE 2022: Charles Leclerc</p>
         </section>
         <br>
-        <h2>13. ZANDVOORT</h2>
-        <section class="rowCircuito">
+        <h2 id="circuito13">13. ZANDVOORT</h2>
+        <section id="datoCircuito12" class="rowCircuito">
             <img src="images/Circuitos/paises-bajos.jpg" width="500" alt="">
             <p>CIRCUITO: Jeddah International Street Circuit <br>
                 LONGITUD: 5154 metros <br>
@@ -175,8 +179,8 @@
                 POLE 2022: Sergio Pérez</p>
         </section>
         <br>
-        <h2>14. MONZA</h2>
-        <section class="rowCircuito">
+        <h2 id="circuito14">14. MONZA</h2>
+        <section id="datoCircuito13" class="rowCircuito">
             <img src="images/Circuitos/italia.jpg" width="500" alt="">
             <p>CIRCUITO: Albert Park <br>
                 LONGITUD: 5303 metros <br>
@@ -186,8 +190,8 @@
                 POLE 2022: Charles Leclerc</p>
         </section>
         <br>
-        <h2>15. MARINA BAY</h2>
-        <section class="rowCircuito">
+        <h2 id="circuito15">15. MARINA BAY</h2>
+        <section id="datoCircuito14" class="rowCircuito">
             <img src="images/Circuitos/singapur.jpg" width="500" alt="">
             <p>CIRCUITO: Baku City Circuit <br>
                 LONGITUD: 0 metros <br>
@@ -197,8 +201,8 @@
                 POLE 2022: Charles Leclerc</p>
         </section>
         <br>
-        <h2>16. SUZUKA</h2>
-        <section class="rowCircuito">
+        <h2 id="circuito16">16. SUZUKA</h2>
+        <section id="datoCircuito15" class="rowCircuito">
             <img src="images/Circuitos/japon.jpg" width="500" alt="">
             <p>CIRCUITO: Hard Rock Stadium Circuit <br>
                 LONGITUD: 0 metros <br>
@@ -208,8 +212,8 @@
                 POLE 2022: Charles Leclerc</p>
         </section>
         <br>
-        <h2>17. LOSAIL</h2>
-        <section class="rowCircuito">
+        <h2 id="circuito17">17. LOSAIL</h2>
+        <section id="datoCircuito16" class="rowCircuito">
             <img src="images/Circuitos/qatar.jpg" width="500" alt="">
             <p>CIRCUITO: Imola <br>
                 LONGITUD: 0 metros <br>
@@ -219,8 +223,8 @@
                 POLE 2022: Max Verstappen</p>
         </section>
         <br>
-        <h2>18. LAS AMERICAS</h2>
-        <section class="rowCircuito">
+        <h2 id="circuito18">18. LAS AMERICAS</h2>
+        <section id="datoCircuito17" class="rowCircuito">
             <img src="images/Circuitos/eeuu.jpg" width="500" alt="">
             <p>CIRCUITO: Montecarlo <br>
                 LONGITUD: 3340 metros <br>
@@ -230,8 +234,8 @@
                 POLE 2022: Charles Leclerc</p>
         </section>
         <br>
-        <h2>19. HERMANOS RODRIGUEZ</h2>
-        <section class="rowCircuito">
+        <h2 id="circuito19">19. HERMANOS RODRIGUEZ</h2>
+        <section id="datoCircuito18" class="rowCircuito">
             <img src="images/Circuitos/mexico.jpg" width="500" alt="">
             <p>CIRCUITO: Catalunya <br>
                 LONGITUD: 4627 metros <br>
@@ -241,8 +245,8 @@
                 POLE 2022: Charles Leclerc</p>
         </section>
         <br>
-        <h2>20. INTERLAGOS</h2>
-        <section class="rowCircuito">
+        <h2 id="circuito20">20. INTERLAGOS</h2>
+        <section id="datoCircuito19" class="rowCircuito">
             <img src="images/Circuitos/brasil.jpg" width="500" alt="">
             <p>CIRCUITO: Gilles Villeneuve <br>
                 LONGITUD: 4361 metros <br>
@@ -252,8 +256,8 @@
                 POLE 2022: Max Verstappen</p>
         </section>
         <br>
-        <h2>21. LAS VEGAS</h2>
-        <section class="rowCircuito">
+        <h2 id="circuito21">21. LAS VEGAS</h2>
+        <section id="datoCircuito20" class="rowCircuito">
             <img src="images/Circuitos/las-vegas.jpg" width="500" alt="">
             <p>CIRCUITO: Red Bull Ring <br>
                 LONGITUD: 4326 metros <br> 
@@ -263,8 +267,8 @@
                 POLE 2022: Max Verstappen</p>
         </section>
         <br>
-        <h2>22. YAS MARINA</h2>
-        <section class="rowCircuito">
+        <h2 id="circuito22">22. YAS MARINA</h2>
+        <section id="datoCircuito21" class="rowCircuito">
             <img src="images/Circuitos/abu-dhabi.jpg" width="500" alt="">
             <p>CIRCUITO: Silverstone <br>
                 LONGITUD: 5141 metros <br>

@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./dist/styles.css" />
+    <title>Calendario // MOTO GP</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+
+    <script src="../src/script.js"></script>
+  </head>
+  <body class="font-sans bg-gray-200">
+    <!-- 1. Menú de Navegación -->
+
+    <nav
+      class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700 ml-4 mr-4 mt-4 mb-4 rounded-lg"
+    >
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a
+          href="index.html"
+          class="flex items-center space-x-3 rtl:space-x-reverse"
+        >
+          <img
+            src="../images/Moto_Gp_logo.png"
+            class="h-12"
+            alt="Logo MotoGP"
+          />
+        </a>
+        <button
+          data-collapse-toggle="navbar-multi-level"
+          type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-multi-level"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Abrir Menu</span>
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level">
+          <ul
+            class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+          >
+            <li>
+              <a
+                href="index.html"
+                class="block py-2 px-3 text-white bg-red-700 rounded md:bg-transparent md:text-red-700 md:p-0 md:dark:text-red-500 dark:bg-red-600 md:dark:bg-transparent"
+                aria-current="page"
+                >Inicio</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="calendario.html"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Calendario</a
+              >
+            </li>
+            <li>
+              <a
+                href="resultados.html"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Resultados</a
+              >
+            </li>
+            <li>
+              <a
+                href="pilotos.html"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Pilotos y Equipos</a
+              >
+            </li>
+            <li>
+              <a
+                href="contacto.html"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Contacto</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 2. Header -->
+
+    <div id="default-carousel" class="relative w-full" data-carousel="slide">
+      <!-- Carousel wrapper -->
+      <div class="relative h-96 ml-4 mr-4 overflow-hidden rounded-lg md:h-full">
+        <!-- Item 1 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img
+            src="../images/1.jpg"
+            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            alt="..."
+          />
+        </div>
+        <!-- Item 2 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img
+            src="../images/2.jpg"
+            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            alt="..."
+          />
+        </div>
+        <!-- Item 3 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img
+            src="../images/3.jpg"
+            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            alt="..."
+          />
+        </div>
+        <!-- Item 4 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img
+            src="../images/4.jpeg"
+            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            alt="..."
+          />
+        </div>
+        <!-- Item 5 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img
+            src="../images/5.jpeg"
+            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            alt="..."
+          />
+        </div>
+      </div>
+      <!-- Slider indicators -->
+      <div
+        class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse"
+      >
+        <button
+          type="button"
+          class="w-3 h-3 rounded-full"
+          aria-current="true"
+          aria-label="Slide 1"
+          data-carousel-slide-to="0"
+        ></button>
+        <button
+          type="button"
+          class="w-3 h-3 rounded-full"
+          aria-current="false"
+          aria-label="Slide 2"
+          data-carousel-slide-to="1"
+        ></button>
+        <button
+          type="button"
+          class="w-3 h-3 rounded-full"
+          aria-current="false"
+          aria-label="Slide 3"
+          data-carousel-slide-to="2"
+        ></button>
+        <button
+          type="button"
+          class="w-3 h-3 rounded-full"
+          aria-current="false"
+          aria-label="Slide 4"
+          data-carousel-slide-to="3"
+        ></button>
+        <button
+          type="button"
+          class="w-3 h-3 rounded-full"
+          aria-current="false"
+          aria-label="Slide 5"
+          data-carousel-slide-to="4"
+        ></button>
+      </div>
+      <!-- Slider controls -->
+      <button
+        type="button"
+        class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        data-carousel-prev
+      >
+        <span
+          class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+        >
+          <svg
+            class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 6 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 1 1 5l4 4"
+            />
+          </svg>
+          <span class="sr-only">Anterior</span>
+        </span>
+      </button>
+      <button
+        type="button"
+        class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        data-carousel-next
+      >
+        <span
+          class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+        >
+          <svg
+            class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 6 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m1 9 4-4-4-4"
+            />
+          </svg>
+          <span class="sr-only">Siguiente</span>
+        </span>
+      </button>
+    </div>
+
+    <!-- 3. Título -->
+
+    <div
+      class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-70 ml-4 mr-4 mt-4 mb-4 rounded-lg"
+    >
+      <div class="flex mt-5 mb-5 ml-6 mr-10">
+        <img
+          src="../images/Captura_de_pantalla_2024-01-20_142656-removebg-preview.png"
+          class="h-12 mt-3"
+          alt=""
+        />
+        <h1 class="mt-4 font-mono font-bold text-3xl tracking-wide text-wrap">
+          FEBRERO
+        </h1>
+      </div>
+
+      <div>
+        <table>
+          <tr class="w-full">
+            <td class="w-50">
+              <p class="ml-10">
+                1 FEB. 3 FEB. || Sepang Shakedown MotoGP™ Official Test
+              </p>
+            </td>
+            <td>
+              <img class="rounded-lg ml-20" src="../images/mal2.jpg" alt="" />
+            </td>
+          </tr>
+          <tr class="w-full">
+            <td class="w-50">
+              <p class="ml-10">6 FEB. 8 FEB. || Sepang MotoGP™ Official Test</p>
+            </td>
+            <td>
+              <img class="rounded-lg ml-20" src="../images/mal.jpg" alt="" />
+            </td>
+          </tr>
+          <tr class="w-full">
+            <td class="w-50">
+              <p class="ml-10">19 FEB. 20 FEB. Qatar MotoGP™ Official Test</p>
+            </td>
+            <td>
+              <img class="rounded-lg ml-20" src="../images/qat.jpg" alt="" />
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="flex mt-5 mb-5 ml-6 mr-10">
+        <img
+          src="../images/Captura_de_pantalla_2024-01-20_142656-removebg-preview.png"
+          class="h-12 mt-3"
+          alt=""
+        />
+        <h1 class="mt-4 font-mono font-bold text-3xl tracking-wide text-wrap">
+          MARZO
+        </h1>
+      </div>
+
+      <div>
+        <table>
+          <tr class="w-full">
+            <td class="w-50">
+              <p class="ml-10">
+                8 MAR. 10 MAR. Qatar Airways Grand Prix of Qatar
+              </p>
+            </td>
+            <td>
+              <img class="rounded-lg ml-32" src="../images/QAT2.jpg" alt="" />
+            </td>
+          </tr>
+          <tr class="w-full">
+            <td class="w-50">
+              <p class="ml-10">22 MAR. 24 MAR. Grande Prémio de Portugal</p>
+            </td>
+            <td>
+              <img class="rounded-lg ml-32" src="../images/POR.jpg" alt="" />
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="flex mt-5 mb-5 ml-6 mr-10">
+        <img
+          src="../images/Captura_de_pantalla_2024-01-20_142656-removebg-preview.png"
+          class="h-12 mt-3"
+          alt=""
+        />
+        <h1 class="mt-4 font-mono font-bold text-3xl tracking-wide text-wrap">
+          ABRIL
+        </h1>
+      </div>
+
+      <div>
+        <table>
+          <tr class="w-full">
+            <td class="w-50">
+              <p class="ml-10">
+                5 ABR. 7 ABR. Gran Premio de la República Argentina
+              </p>
+            </td>
+            <td>
+              <img class="rounded-lg ml-32" src="../images/ARG.jpg" alt="" />
+            </td>
+          </tr>
+          <tr class="w-full">
+            <td class="w-50">
+              <p class="ml-10">
+                12 ABR. 14 ABR. Red Bull Grand Prix of The Americas
+              </p>
+            </td>
+            <td>
+              <img class="rounded-lg ml-32" src="../images/AME.jpg" alt="" />
+            </td>
+          </tr>
+          <tr class="w-full">
+            <td class="w-50">
+              <p class="ml-10">26 ABR. 28 ABR. Gran Premio de España</p>
+            </td>
+            <td>
+              <img class="rounded-lg ml-32" src="../images/SPA.jpg" alt="" />
+            </td>
+          </tr>
+          <tr class="w-full">
+            <td class="w-50">
+              <p class="ml-10">12 29 ABR. Jerez MotoGP™ Official Test</p>
+            </td>
+            <td>
+              <img class="rounded-lg ml-32" src="../images/SPA.jpg" alt="" />
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="flex mt-5 mb-5 ml-6 mr-10">
+        <img
+          src="../images/Captura_de_pantalla_2024-01-20_142656-removebg-preview.png"
+          class="h-12 mt-3"
+          alt=""
+        />
+        <h1 class="mt-4 font-mono font-bold text-3xl tracking-wide text-wrap">
+          MAYO
+        </h1>
+      </div>
+
+      <div>
+        <table>
+          <tr class="w-full">
+            <td class="w-50">
+              <p class="ml-10">10 MAY. 12 MAY. Grand Prix de France</p>
+            </td>
+            <td>
+              <img class="rounded-lg ml-20" src="../images/FRA.jpg" alt="" />
+            </td>
+          </tr>
+          <tr class="w-full">
+            <td class="w-50">
+              <p class="ml-10">
+                24 MAY. 26 MAY. Gran Premi Monster Energy de Catalunya
+              </p>
+            </td>
+            <td>
+              <img class="rounded-lg ml-20" src="../images/CAT.jpg" alt="" />
+            </td>
+          </tr>
+          <tr class="w-full">
+            <td class="w-50">
+              <p class="ml-10">31 MAY. 2 JUN. Gran Premio d'Italia</p>
+            </td>
+            <td>
+              <img class="rounded-lg ml-20" src="../images/ITA.jpg" alt="" />
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="flex mt-5 mb-5 ml-6 mr-10">
+        <img
+          src="../images/Captura_de_pantalla_2024-01-20_142656-removebg-preview.png"
+          class="h-12 mt-3"
+          alt=""
+        />
+        <h1 class="mt-4 font-mono font-bold text-3xl tracking-wide text-wrap">
+          JUNIO
+        </h1>
+      </div>
+
+      <div>
+        <table>
+          <tr class="w-full">
+            <td class="w-50">
+              <p class="ml-10">3 JUN. Mugello MotoGP™ Official Test</p>
+            </td>
+            <td>
+              <img class="rounded-lg ml-32" src="../images/ITA.jpg" alt="" />
+            </td>
+          </tr>
+          <tr class="w-full">
+            <td class="w-50">
+              <p class="ml-10">14 JUN. 16 JUN. Grand Prix of Kazakhstan</p>
+            </td>
+            <td>
+              <img class="rounded-lg ml-32" src="../images/KAZ.jpg" alt="" />
+            </td>
+          </tr>
+          <tr class="w-full">
+            <td class="w-50">
+              <p class="ml-10">28 JUN. 30 JUN. Motul TT Assen</p>
+            </td>
+            <td>
+              <img class="rounded-lg ml-32" src="../images/SPA.jpg" alt="" />
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="flex mt-5 mb-5 ml-6 mr-10">
+        <img
+          src="../images/Captura_de_pantalla_2024-01-20_142656-removebg-preview.png"
+          class="h-12 mt-3"
+          alt=""
+        />
+        <h1 class="mt-4 font-mono font-bold text-3xl tracking-wide text-wrap">
+          JULIO
+        </h1>
+      </div>
+
+      <div>
+        <table>
+          <tr class="w-full">
+            <td class="w-50">
+              <p class="ml-10">
+                5 JUL. 7 JUL. Liqui Moly Motorrad Grand Prix Deutschland
+              </p>
+            </td>
+            <td>
+              <img class="rounded-lg ml-32" src="../images/ARG.jpg" alt="" />
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="flex mt-5 mb-5 ml-6 mr-10">
+        <img
+          src="../images/Captura_de_pantalla_2024-01-20_142656-removebg-preview.png"
+          class="h-12 mt-3"
+          alt=""
+        />
+        <h1 class="mt-4 font-mono font-bold text-3xl tracking-wide text-wrap">
+          AGOSTO
+        </h1>
+      </div>
+
+      <div>
+        <table>
+          <tr class="w-full">
+            <td class="w-50">
+              <p class="ml-10">
+                2 AGO. 4 AGO. Monster Energy British Grand Prix
+              </p>
+            </td>
+            <td>
+              <img class="rounded-lg ml-32" src="../images/ARG.jpg" alt="" />
+            </td>
+          </tr>
+          <tr class="w-full">
+            <td class="w-50">
+              <p class="ml-10">
+                16 AGO. 18 AGO. Motorrad Grand Prix von Österreich
+              </p>
+            </td>
+            <td>
+              <img class="rounded-lg ml-32" src="../images/AME.jpg" alt="" />
+            </td>
+          </tr>
+          <tr class="w-full">
+            <td class="w-50">
+              <p class="ml-10">30 AGO. 1 SEPT. Gran Premio de Aragón</p>
+            </td>
+            <td>
+              <img class="rounded-lg ml-32" src="../images/AME.jpg" alt="" />
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="flex mt-5 mb-5 ml-6 mr-10">
+        <img
+          src="../images/Captura_de_pantalla_2024-01-20_142656-removebg-preview.png"
+          class="h-12 mt-3"
+          alt=""
+        />
+        <h1 class="mt-4 font-mono font-bold text-3xl tracking-wide text-wrap">
+          SEPTIEMBRE
+        </h1>
+      </div>
+
+      <div>
+        <table>
+          <tr class="w-full">
+            <td class="w-50">
+              <p class="ml-10">
+                6 SEPT. 8 SEPT. Gran Premio Red Bull di San Marino e della
+                Riviera di Rimini
+              </p>
+            </td>
+            <td>
+              <img class="rounded-lg ml-32" src="../images/ARG.jpg" alt="" />
+            </td>
+          </tr>
+          <tr class="w-full">
+            <td class="w-50">
+              <p class="ml-10">9 SEPT. Misano MotoGP™ Official Test</p>
+            </td>
+            <td>
+              <img class="rounded-lg ml-32" src="../images/AME.jpg" alt="" />
+            </td>
+          </tr>
+          <tr class="w-full">
+            <td class="w-50">
+              <p class="ml-10">
+                27 SEPT. 29 SEPT. Pertamina Grand Prix of Indonesia
+              </p>
+            </td>
+            <td>
+              <img class="rounded-lg ml-32" src="../images/SPA.jpg" alt="" />
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="flex mt-5 mb-5 ml-6 mr-10">
+        <img
+          src="../images/Captura_de_pantalla_2024-01-20_142656-removebg-preview.png"
+          class="h-12 mt-3"
+          alt=""
+        />
+        <h1 class="mt-4 font-mono font-bold text-3xl tracking-wide text-wrap">
+          OCTUBRE
+        </h1>
+      </div>
+
+      <div>
+        <table>
+          <tr class="w-full">
+            <td class="w-50">
+              <p class="ml-10">4 OCT. 6 OCT. Motul Grand Prix of Japan</p>
+            </td>
+            <td>
+              <img class="rounded-lg ml-32" src="../images/ARG.jpg" alt="" />
+            </td>
+          </tr>
+          <tr class="w-full">
+            <td class="w-50">
+              <p class="ml-10">
+                18 OCT. 20 OCT. Australian Motorcycle Grand Prix
+              </p>
+            </td>
+            <td>
+              <img class="rounded-lg ml-32" src="../images/AME.jpg" alt="" />
+            </td>
+          </tr>
+          <tr class="w-full">
+            <td class="w-50">
+              <p class="ml-10">25 OCT. 27 OCT. OR Thailand Grand Prix</p>
+            </td>
+            <td>
+              <img class="rounded-lg ml-32" src="../images/AME.jpg" alt="" />
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="flex mt-5 mb-5 ml-6 mr-10">
+        <img
+          src="../images/Captura_de_pantalla_2024-01-20_142656-removebg-preview.png"
+          class="h-12 mt-3"
+          alt=""
+        />
+        <h1 class="mt-4 font-mono font-bold text-3xl tracking-wide text-wrap">
+          NOVIEMBRE
+        </h1>
+      </div>
+
+      <div>
+        <table>
+          <tr class="w-full">
+            <td class="w-50">
+              <p class="ml-10">1 NOV. 3 NOV. PETRONAS Grand Prix of Malaysia</p>
+            </td>
+            <td>
+              <img class="rounded-lg ml-32" src="../images/ARG.jpg" alt="" />
+            </td>
+          </tr>
+          <tr class="w-full">
+            <td class="w-50">
+              <p class="ml-10">
+                15 NOV. 17 NOV. Gran Premio Motul de la Comunitat Valenciana
+              </p>
+            </td>
+            <td>
+              <img class="rounded-lg ml-32" src="../images/AME.jpg" alt="" />
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- 5. Sección e Información -->
+
+    <!-- FOOTER -->
+    <footer class="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
+      <div
+        class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between"
+      >
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+          >© 2023
+          <a href="https://flowbite.com/" class="hover:underline">Jhony™</a>.
+          All Rights Reserved.
+        </span>
+        <ul
+          class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0"
+        >
+          <li>
+            <a href="#" class="hover:underline me-4 md:me-6">Inicio</a>
+          </li>
+          <li>
+            <a href="#" class="hover:underline me-4 md:me-6"
+              >Política de privacidad</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:underline me-4 md:me-6">Licencia</a>
+          </li>
+          <li>
+            <a href="#" class="hover:underline">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

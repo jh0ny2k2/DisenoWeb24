@@ -6,6 +6,9 @@
     <title>Equipos // Formula 1</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="images/f1.avif">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="index.js"></script>
 </head>
 <body>
     <header>
@@ -33,12 +36,19 @@
       <img class="foto" src="images/red.jpg" alt="">
       <section>
         <div class="container">
-          <h1>EQUIPOS</h1>
-          <div class="equipos">
-            <section class="row" style=" border-top: 2px solid rgb(106, 0, 255);
+          <h1 id="equip">EQUIPOS</h1>
+          <p id="descripcion1">Aunque muchas veces se habla de los pilotos de la Fórmula 1 como si fueran los únicos contendientes en este deporte, los participantes en esta categoría son equipos, conocidos popularmente como escuderías.<br><br>
+                
+            A lo largo de la temporada, los equipos compiten por el Campeonato de Constructores de la Fórmula 1 con dos monoplazas que deben fabricar siguiendo reglamentos técnicos y financieros.<br><br>
+
+            Los reglamentos en la F1 son fundamentales, ya que indican qué partes deben ser obligatoriamente fabricadas por las escuderías o cuáles pueden comprar de otros equipos.<br><br>
+          
+            La reglamentación también indica qué diseños están permitidos en las diferentes partes del auto, qué cambios se le pueden hacer a lo largo de la campaña y cuánto dinero pueden gastar para fabricarlo.</p>
+          <div id="eq" class="equipos">
+            <section id="redbull" class="rowEquipo" style=" border-top: 2px solid rgb(106, 0, 255);
             border-right: 2px solid rgb(106, 0, 255);">
-              <div class="rowColumn">
-                <img src="images/logos/redbull.png" style="margin-left: 80%;" width="100" alt="">
+              <div class="rowCol">
+                <img id="logo1" src="images/logos/redbull.png" style="margin-left: 45%;" width="100" alt="">
               </div>
               <h3>Pilotos</h3>
               <div class="rowfilas">
@@ -51,13 +61,14 @@
                   <img src="images/pilotos/checo.png" width="100" alt="">
                 </div>
               </div>
-              <img src="images/coches/redbullc.png" width="500" alt="">
+              <img id="credbull" src="images/coches/redbullc.png" width="500" alt="">
+              <p id="nredbull" class="des">Redbull RB20</p>
             </section>
 
-            <section class="row" style=" border-top: 2px solid rgb(121, 121, 121);
+            <section id="mercedes" class="rowEquipo" style=" border-top: 2px solid rgb(121, 121, 121);
             border-right: 2px solid rgb(121, 121, 121);">
-              <div class="rowColumn">
-                <img src="images/logos/mercedes.png" style="margin-left: 80%;" width="100" alt="">
+              <div class="rowCol">
+                <img id="logo2" src="images/logos/mercedes.png" style="margin-left: 45%;" width="100" alt="">
               </div>
               <h3>Pilotos</h3>
               <div class="rowfilas">
@@ -70,13 +81,14 @@
                   <img src="images/pilotos/russel.png" width="100" alt="">
                 </div>
               </div>
-              <img src="images/coches/mercedesc.png" width="500" alt="">
+              <img  id="cmercedes" src="images/coches/mercedesc.png" width="500" alt="">
+              <p id="nmercedes" class="des">Mercedes M20</p>
             </section>
 
-            <section class="row" style=" border-top: 2px solid rgb(255, 0, 0);
+            <section id="ferrari" class="rowEquipo" style=" border-top: 2px solid rgb(255, 0, 0);
             border-right: 2px solid rgb(255, 0, 0);">
               <div class="rowColumn">
-                <img src="images/logos/ferrari.png" style="margin-left: 80%;" width="100" alt="">
+                <img id="logo3" src="images/logos/ferrari.png" style="margin-left: 80%;" width="100" alt="">
               </div>
               <h3>Pilotos</h3>
               <div class="rowfilas">
@@ -89,13 +101,14 @@
                   <img src="images/pilotos/leclerc.png" width="100" alt="">
                 </div>
               </div>
-              <img src="images/coches/ferraric.png" width="500" alt="">
+              <img id="cferrari" src="images/coches/ferraric.png" width="500" alt="">
+              <p id="nferrari" class="des">Ferrari SF-24</p>
             </section>
 
-            <section class="row" style=" border-top: 2px solid rgb(255, 140, 0);
+            <section id="mclaren" class="rowEquipo" style=" border-top: 2px solid rgb(255, 140, 0);
             border-right: 2px solid rgb(255, 140, 0);">
               <div class="rowColumn">
-                <img src="images/logos/mclare.png" style="margin-left: 80%;" width="100" alt="">
+                <img id="logo4" src="images/logos/mclare.png" style="margin-left: 80%;" width="100" alt="">
               </div>
               <h3>Pilotos</h3>
               <div class="rowfilas">
@@ -108,13 +121,14 @@
                   <img src="images/pilotos/piastri.png" width="100" alt="">
                 </div>
               </div>
-              <img src="images/coches/mclarenc.png" width="500" alt="">
+              <img id="cmclaren" src="images/coches/mclarenc.png" width="500" alt="">
+              <p id="nmclaren" class="des">Mclaren MCL20</p>
             </section>
 
-            <section class="row" style=" border-top: 2px solid rgb(2, 108, 0);
+            <section id="aston" class="rowEquipo" style=" border-top: 2px solid rgb(2, 108, 0);
             border-right: 2px solid rgb(2, 108, 0);">
               <div class="rowColumn">
-                <img src="images/logos/aston.png" style="margin-left: 80%;" width="100" alt="">
+                <img id="logo5" src="images/logos/aston.png" style="margin-left: 80%;" width="100" alt="">
               </div>
               <h3>Pilotos</h3>
               <div class="rowfilas">
@@ -127,13 +141,14 @@
                   <img src="images/pilotos/lance.png" width="100" alt="">
                 </div>
               </div>
-              <img src="images/coches/astonc.png" width="500" alt="">
+              <img id="caston" src="images/coches/astonc.png" width="500" alt="">
+              <p id="naston" class="des">Aston Martin AMR24</p>
             </section>
             
-            <section class="row" style=" border-top: 2px solid rgb(38, 0, 255);
+            <section id="alpine" class="rowEquipo" style=" border-top: 2px solid rgb(38, 0, 255);
             border-right: 2px solid rgb(38, 0, 255);">
               <div class="rowColumn">
-                <img src="images/logos/alpine.png" style="margin-left: 80%;" width="100" alt="">
+                <img id="logo6" src="images/logos/alpine.png" style="margin-left: 80%;" width="100" alt="">
               </div>
               <h3>Pilotos</h3>
               <div class="rowfilas">
@@ -146,13 +161,14 @@
                   <img src="images/pilotos/pierre.png" width="100" alt="">
                 </div>
               </div>
-              <img src="images/coches/alpinec.png" width="500" alt="">
+              <img id="calpine" src="images/coches/alpinec.png" width="500" alt="">
+              <p id="nalpine" class="des">Alpine A524</p>
             </section>
 
-            <section class="row" style=" border-top: 2px solid rgb(106, 0, 255);
+            <section id="williams" class="rowEquipo" style=" border-top: 2px solid rgb(106, 0, 255);
             border-right: 2px solid rgb(106, 0, 255);">
               <div class="rowColumn">
-                <img src="images/logos/williams.png" style="margin-left: 80%;" width="100" alt="">
+                <img id="logo7" src="images/logos/williams.png" style="margin-left: 80%;" width="100" alt="">
               </div>
               <h3>Pilotos</h3>
               <div class="rowfilas">
@@ -165,13 +181,14 @@
                   <img src="images/pilotos/sargeant.png" width="100" alt="">
                 </div>
               </div>
-              <img src="images/coches/williamsc.png" width="500" alt="">
+              <img id="cwilliams" src="images/coches/williamsc.png" width="500" alt="">
+              <p id="nwilliams" class="des">Williams FW46</p>
             </section>
 
-            <section class="row" style=" border-top: 2px solid rgb(20, 0, 48);
+            <section id="alpha" class="rowEquipo" style=" border-top: 2px solid rgb(20, 0, 48);
             border-right: 2px solid rgb(20, 0, 48);">
               <div class="rowColumn">
-                <img src="images/logos/alpha.png" style="margin-left: 80%;" width="100" alt="">
+                <img id="logo8" src="images/logos/alpha.png" style="margin-left: 80%;" width="100" alt="">
               </div>
               <h3>Pilotos</h3>
               <div class="rowfilas">
@@ -184,13 +201,14 @@
                   <img src="images/pilotos/ricciardo.png" width="100" alt="">
                 </div>
               </div>
-              <img src="images/coches/alphac.png" width="500" alt="">
+              <img id="calpha" src="images/coches/alphac.png" width="500" alt="">
+              <p id="nalpha" class="des">Alpha Tauri VCARB 01</p>
             </section>
 
-            <section class="row" style=" border-top: 2px solid rgb(117, 2, 0);
+            <section id="alfa" class="rowEquipo" style=" border-top: 2px solid rgb(117, 2, 0);
             border-right: 2px solid rgb(117, 2, 0);">
               <div class="rowColumn">
-                <img src="images/logos/alfa.png" style="margin-left: 80%;" width="100" alt="">
+                <img id="logo9" src="images/logos/alfa.png" style="margin-left: 80%;" width="100" alt="">
               </div>
               <h3>Pilotos</h3>
               <div class="rowfilas">
@@ -203,13 +221,14 @@
                   <img src="images/pilotos/zhou.png" width="100" alt="">
                 </div>
               </div>
-              <img src="images/coches/alfac.png" width="500" alt="">
+              <img id="calfa" src="images/coches/alfac.png" width="500" alt="">
+              <p id="nalfa" class="des">Alfa Romeo C44</p>
             </section>
 
-            <section class="row" style=" border-top: 2px solid rgb(0, 0, 0);
+            <section id="haas" class="rowEquipo" style=" border-top: 2px solid rgb(0, 0, 0);
             border-right: 2px solid rgb(0, 0, 0);">
               <div class="rowColumn">
-                <img src="images/logos/hass.png" style="margin-left: 80%;" width="100" alt="">
+                <img id="logo10" src="images/logos/hass.png" style="margin-left: 80%;" width="100" alt="">
               </div>
               <h3>Pilotos</h3>
               <div class="rowfilas">
@@ -222,7 +241,8 @@
                   <img src="images/pilotos/magnussen.png" width="100" alt="">
                 </div>
               </div>
-              <img src="images/coches/haasc.png" width="500" alt="">
+              <img id="chaas" src="images/coches/haasc.png" width="500" alt="">
+              <p id="nhaas" class="des">Haas VF-24</p>
             </section>
   
             

@@ -9,6 +9,15 @@
   border-radius: 10px;
 }
 
+.rowEquipo {
+  text-align: center;
+  padding: 10px;
+
+  margin: 5%;
+  background-repeat: no-repeat; background-size:contain; background-position-x: center;
+  border-radius: 10px;
+}
+
 .equipos{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -17,8 +26,16 @@
   grid-row-gap: 0px;
 }
 
-.piloto {
+.equpoNuevo {
   display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.piloto {
+  display: none;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 0px;
@@ -34,6 +51,9 @@ span{
   color: #ff0000;
 }
 
+.des{
+  display: none;
+}
 
 .rowfilas {
   display: grid;
@@ -50,8 +70,25 @@ span{
   grid-column-gap: 0px;
   grid-row-gap: 0px; 
 }
+.rowCol {
+  text-align: center;
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px; 
+}
 
 .rowCircuito {
+  border-top: 1px solid #ff0000;
+  border-radius: 10px;
+  display: none;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.rowCircuit {
   border-top: 1px solid #ff0000;
   border-radius: 10px;
   display: grid;
@@ -226,9 +263,28 @@ table td {
   width: 99%;
 }
 
+.fullscreen {
+  width: 200%;
+  height: 100%;
+}
 
+#descripcion {
+  display: none;
+  text-align: center;
+  background-color: #ff0000;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+}
 
-
+#descripcion1 {
+  display:none;
+  text-align: center;
+  background-color: #ff0000;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+}
 
 
 
